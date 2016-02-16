@@ -3,3 +3,5 @@ Test GitHub API to retrieve repos from a given user and calculate their favourit
 
 **Example**
 `$node --harmony index.js --name josemato`
+
+**Tested on node v5.5.0**
