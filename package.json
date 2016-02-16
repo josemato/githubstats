@@ -1,0 +1,16 @@
+{
+  "name": "githubstats",
+  "version": "1.0.0",
+  "description": "Test github api to show most popular language from a given user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony index.js"
+  },
+  "author": "Jose Mato",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.69.0",
+    "yargs": "^4.1.0"
+  }
+}
