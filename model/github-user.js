@@ -21,6 +21,10 @@ class GithubUser {
 	 * Fetch user repositories from github and cache on memory. Clear previous stats when new fetch appears.
 	 * */
 	fetchRepositories() {
+		/**
+		 * To gain performance, a better approach should be get repos paginated doing more queries in parallel and
+		 * wait for the promises result (Promise.all) to join the data
+		 * */
 		let url = `https://api.github.com/users/${this.username}/repos`
 
 		return new Promise((resolve, reject) => {
