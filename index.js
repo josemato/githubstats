@@ -19,7 +19,7 @@ user.fetchRepositories().then((repos) => {
 	console.log('User favourites languages')
 	console.log('==============================')
 	stats.forEach((stat) => {
-		console.log(`${stat.language}: ${stat.counter}`)
+		console.log(stat.toString())
 	})
 }).catch((err) => {
 	console.log('error', err)

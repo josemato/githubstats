@@ -1,4 +1,6 @@
+const Language = require('./language')
 const WebService = require('../service/web-service')
+
 
 class GithubUser {
 	/**
@@ -6,7 +8,11 @@ class GithubUser {
 	 * */
 	constructor(username) {
 		this.username = username
+
+		// array of github repos
 		this.repos = []
+
+		// array of favourites languages
 		this.stats = []
 	}
 
@@ -72,10 +78,7 @@ class GithubUser {
 			// get favourite languages and store on cache
 			Object.keys(tmpLanguages).forEach((language) => {
 				if(tmpLanguages[language] === maxCounter) {
-					this.stats.push({
-						language: language,
-						counter: tmpLanguages[language]
-					})
+					this.stats.push(new Language(language, tmpLanguages[language]))
 				}
 			})
 
